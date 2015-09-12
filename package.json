@@ -1,0 +1,35 @@
+{
+  "name": "flight-designator",
+  "version": "1.0.0",
+  "description": "Parse and construct flight designators",
+  "license": "MIT",
+  "keywords": [
+    "flight",
+    "designator",
+    "code",
+    "airline",
+    "number",
+    "iata",
+    "icao"
+  ],
+  "main": "lib/flight-designator",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~2.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-flight-designator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhermsmeier/node-flight-designator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-flight-designator/issues"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
