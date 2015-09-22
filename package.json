@@ -1,6 +1,6 @@
 {
   "name": "flight-designator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse and construct flight designators",
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~2.3.2"
+    "mocha": "~2.3.3"
   },
   "scripts": {
     "test": "mocha"
