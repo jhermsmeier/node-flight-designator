@@ -1,7 +1,7 @@
 # Flight Designator
-[![npm](http://img.shields.io/npm/v/flight-designator.svg?style=flat-square)](https://npmjs.com/flight-designator)
-[![npm downloads](http://img.shields.io/npm/dm/flight-designator.svg?style=flat-square)](https://npmjs.com/flight-designator)
-[![build status](http://img.shields.io/travis/jhermsmeier/node-flight-designator.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-flight-designator)
+[![npm](https://img.shields.io/npm/v/flight-designator.svg?style=flat-square)](https://npmjs.com/flight-designator)
+[![npm downloads](https://img.shields.io/npm/dm/flight-designator.svg?style=flat-square)](https://npmjs.com/flight-designator)
+[![build status](https://img.shields.io/travis/jhermsmeier/node-flight-designator.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-flight-designator)
 
 ## Install via [npm](https://npmjs.com)
 
