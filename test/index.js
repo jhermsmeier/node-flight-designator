@@ -87,6 +87,24 @@ describe( 'FlightDesignator', function() {
         })
       })
       
+      it( 'R6750', function() {
+        var result = Flight.parse( 'R6750' )
+        assert.deepEqual( result, {
+          airlineCode: 'R6',
+          flightNumber: '750',
+          operationalSuffix: '',
+        })
+      })
+      
+      it( 'AB6430', function() {
+        var result = Flight.parse( 'AB6430' )
+        assert.deepEqual( result, {
+          airlineCode: 'AB',
+          flightNumber: '6430',
+          operationalSuffix: '',
+        })
+      })
+      
     })
     
     describe( 'invalid', function() {
