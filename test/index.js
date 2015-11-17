@@ -128,39 +128,27 @@ describe( 'FlightDesignator', function() {
     describe( 'invalid', function() {
       
       it( '1', function() {
-        assert.throws( function() {
-          Flight.parse( '1' )
-        })
+        assert.equal( null, Flight.parse( '1' ) )
       })
       
       it( '23', function() {
-        assert.throws( function() {
-          Flight.parse( '23' )
-        })
+        assert.equal( null, Flight.parse( '23' ) )
       })
       
       it( 'X1', function() {
-        assert.throws( function() {
-          Flight.parse( 'X1' )
-        })
+        assert.equal( null, Flight.parse( 'X1' ) )
       })
       
       it( 'AS0', function() {
-        assert.throws( function() {
-          Flight.parse( 'AS0' )
-        })
+        assert.equal( null, Flight.parse( 'AS0' ) )
       })
       
       it( 'XY00001', function() {
-        assert.throws( function() {
-          Flight.parse( 'XY00001' )
-        })
+        assert.equal( null, Flight.parse( 'XY00001' ) )
       })
       
       it( 'ASDFGHGF', function() {
-        assert.throws( function() {
-          Flight.parse( 'ASDFGHGF' )
-        })
+        assert.equal( null, Flight.parse( 'ASDFGHGF' ) )
       })
       
     })
