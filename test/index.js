@@ -105,6 +105,24 @@ describe( 'FlightDesignator', function() {
         })
       })
       
+      it( '4U050', function() {
+        var result = Flight.parse( '4U050' )
+        assert.deepEqual( result, {
+          airlineCode: '4U',
+          flightNumber: '050',
+          operationalSuffix: '',
+        })
+      })
+      
+      it( 'LH180', function() {
+        var result = Flight.parse( 'LH180' )
+        assert.deepEqual( result, {
+          airlineCode: 'LH',
+          flightNumber: '180',
+          operationalSuffix: '',
+        })
+      })
+      
     })
     
     describe( 'invalid', function() {
