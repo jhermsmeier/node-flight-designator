@@ -12,8 +12,29 @@ $ npm install --save flight-designator
 
 ## Usage
 
+For API Documentation, see [doc/api-reference.md](https://github.com/jhermsmeier/node-flight-designator/blob/master/doc/api-reference.md)
+
 ```js
 var FlightDesignator = require( 'flight-designator' )
+```
+
+##### Parse
+
+```js
+FlightDesignator.parse( 'U24511A' ) // OR
+new FlightDesignator().parse( 'U24511A' )
+> FlightDesignator {
+  airlineCode: 'U2',
+  flightNumber: 4511,
+  operationalSuffix: 'A'
+}
+```
+
+##### Validate
+
+```js
+FlightDesignator.isValid( 'KLM0180' )
+> true
 ```
 
 ```js
@@ -26,35 +47,44 @@ FlightDesignator.isValidFlightNumber( '0180' )
 > true
 ```
 
-```js
-FlightDesignator.parse( 'U24511A' )
-> {
-  airlineCode: 'U2',
-  flightNumber: 4511,
-  operationalSuffix: 'A'
-}
-```
+##### Construct & validate instance
 
 ```js
-FlightDesignator.format( 'u2 0350A' )
-> 'U2350A'
-FlightDesignator.format( 'u2 0350A', true )
-> 'U2 350 A'
-```
-
-```js
-new FlightDesignator( 'KLM', '645' )
-> {
+// Construct a flight designator
+var flight = new FlightDesignator( 'KLM', '645' )
+> FlightDesignator {
   airlineCode: 'KLM',
   flightNumber: 645,
   operationalSuffix: ''
 }
+// Check whether it's valid
+flight.isValid()
+> true
+```
+
+##### Format flight designators
+
+```js
+FlightDesignator.format( 'u2 0350A' )
+// Compact
+> 'U2350A'
+// With spaces
+FlightDesignator.format( 'u2 0350A', true )
+> 'U2 350 A'
+// With zero-padded flight number
+FlightDesignator.format( 'u2350A', true, true )
+> 'U2 0350 A'
 ```
 
 ```js
-var flight = new FlightDesignator( 'LH', 2054, 'X' )
+var flight = new FlightDesignator( 'LH', 254, 'X' )
+// Compact
 flight.toString()
-> 'LH2054X'
+> 'LH254X'
+// With spaces
 flight.toString( true )
-> 'LH 2054 X'
+> 'LH 254 X'
+// With zero-padded flight number
+flight.toString( true, true )
+> 'LH 0254 X'
 ```
