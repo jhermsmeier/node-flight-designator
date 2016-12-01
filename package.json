@@ -16,10 +16,8 @@
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {},
   "devDependencies": {
+    "jsdoc-to-markdown": "~2.0.1",
     "mocha": "~3.2.0"
-  },
-  "scripts": {
-    "test": "mocha"
   },
   "homepage": "https://github.com/jhermsmeier/node-flight-designator",
   "repository": {
@@ -30,6 +28,11 @@
     "url": "https://github.com/jhermsmeier/node-flight-designator/issues"
   },
   "directories": {
+    "doc": "doc",
     "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "doc": "jsdoc2md 'lib/**/*.js' --separators --param-list-format list > doc/api-reference.md"
   }
 }
