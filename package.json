@@ -16,7 +16,7 @@
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~3.1.0"
+    "mocha": "~3.2.0"
   },
   "scripts": {
     "test": "mocha"
