@@ -16,5 +16,25 @@ describe( 'FlightDesignator', function() {
       assert.equal( Flight.format('lh0018'), 'LH18' )
     })
     
+    it( 'lh0018 w/ spaces', function() {
+      assert.equal( Flight.format('lh0018', true), 'LH 18' )
+    })
+    
+    it( 'lh0018 w/ padding', function() {
+      assert.equal( Flight.format('lh0018', false, true), 'LH0018' )
+    })
+    
+    it( 'lh0018 w/ spaces & padding', function() {
+      assert.equal( Flight.format('lh0018', true, true), 'LH 0018' )
+    })
+    
+    it( 'lh0018C w/ padding', function() {
+      assert.equal( Flight.format('lh0018c', false, true), 'LH0018C' )
+    })
+    
+    it( 'lh0018C w/ spaces & padding', function() {
+      assert.equal( Flight.format('lh0018c', true, true), 'LH 0018 C' )
+    })
+    
   })
 })
