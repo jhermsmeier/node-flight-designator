@@ -1,6 +1,6 @@
 {
   "name": "flight-designator",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Parse and construct flight designators",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
